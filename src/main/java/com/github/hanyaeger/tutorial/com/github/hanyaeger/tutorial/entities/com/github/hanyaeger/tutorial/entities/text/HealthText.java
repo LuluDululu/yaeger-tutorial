@@ -9,6 +9,7 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.*;
 
 public class HealthText extends TextEntity {
+
     public HealthText(Coordinate2D initialLocation){
         super(initialLocation);
 
@@ -19,6 +20,8 @@ public class HealthText extends TextEntity {
     public void setHealthText(int health){
         setText("Health: " + health);
     }
+
+
 
 
 }
