@@ -6,15 +6,30 @@ import com.github.hanyaeger.api.entities.*;
 import com.github.hanyaeger.api.entities.impl.DynamicSpriteEntity;
 import com.github.hanyaeger.api.scenes.SceneBorder;
 import com.github.hanyaeger.api.userinput.KeyListener;
+import com.github.hanyaeger.tutorial.Waterworld;
+import com.github.hanyaeger.tutorial.com.github.hanyaeger.tutorial.entities.com.github.hanyaeger.tutorial.entities.text.HealthText;
 import javafx.scene.input.KeyCode;
 
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
 
+import com.github.hanyaeger.tutorial.*;
+
 public class Hanny extends DynamicSpriteEntity implements KeyListener, SceneBorderTouchingWatcher, Newtonian, Collided {
-    public Hanny(Coordinate2D location) {
+
+    private HealthText healthText;
+    private int health = 1;
+
+    private Waterworld waterworld;
+
+
+    public Hanny(Coordinate2D location, HealthText healthText, Waterworld waterworld) {
         super("sprites/hanny.png", location, new Size(20,40), 1, 2);
+        this.healthText = healthText;
+        healthText.setHealthText(health);
+        this.waterworld = waterworld;
+
     }
 
     @Override
@@ -55,10 +70,16 @@ public class Hanny extends DynamicSpriteEntity implements KeyListener, SceneBord
 
     @Override
     public void onCollision(List<Collider> list) {
+
         setAnchorLocation(
                 new Coordinate2D(new Random().nextInt((int)(getSceneWidth()
                         - getWidth())),
                         new Random().nextInt((int)(getSceneHeight() - getHeight())))
         );
+        health--;
+        healthText.setHealthText(health);
+        if(health == 0){
+            waterworld.setActiveScene(2);
+        }
     }
 }

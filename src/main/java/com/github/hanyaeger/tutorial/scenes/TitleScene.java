@@ -34,6 +34,6 @@ public class TitleScene extends StaticScene {
         waterworldText.setFill(Color.LIGHTBLUE);
         waterworldText.setFont(Font.font("Roboto", FontWeight.SEMI_BOLD, 80));
         addEntity(waterworldText);
-        addEntity(new StartButton(new Coordinate2D(getWidth()/2, getHeight() / 2 + 100), waterworld));
+        addEntity(new StartButton(new Coordinate2D(getWidth()/2, getHeight() / 2 + 100), waterworld, "Start Game"));
     }
 }
