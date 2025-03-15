@@ -4,8 +4,9 @@ import com.github.hanyaeger.api.Coordinate2D;
 import com.github.hanyaeger.api.scenes.DynamicScene;
 import com.github.hanyaeger.tutorial.Waterworld;
 import com.github.hanyaeger.tutorial.com.github.hanyaeger.tutorial.entities.Hanny;
-import com.github.hanyaeger.tutorial.com.github.hanyaeger.tutorial.entities.SwordFish;
+import com.github.hanyaeger.tutorial.com.github.hanyaeger.tutorial.entities.*;
 import com.github.hanyaeger.tutorial.com.github.hanyaeger.tutorial.entities.com.github.hanyaeger.tutorial.entities.text.HealthText;
+import com.github.hanyaeger.tutorial.entities.swordfish.SwordFish;
 
 public class GameLevel extends DynamicScene {
     Waterworld waterworld;
