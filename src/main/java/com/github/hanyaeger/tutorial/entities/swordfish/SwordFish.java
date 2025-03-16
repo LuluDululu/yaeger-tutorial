@@ -11,7 +11,7 @@ public class SwordFish extends DynamicCompositeEntity implements SceneBorderCros
 
     public SwordFish(Coordinate2D initialLocation) {
         super(initialLocation);
-        setMotion(15, 270);
+        setMotion(4, 270);
     }
 
     @Override

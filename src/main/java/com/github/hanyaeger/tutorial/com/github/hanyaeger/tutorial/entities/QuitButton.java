@@ -12,8 +12,6 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Optional;
 
 public class QuitButton extends TextEntity implements MouseButtonPressedListener {
